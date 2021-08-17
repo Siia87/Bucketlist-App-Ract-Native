@@ -17,18 +17,12 @@ activity?type=${mypick}`)).data.activity)
     })()
   }
 
-  function addToList(text) {
-    setMyInspiration(text)
-  }
+
 
   return (
     <View style={styles.container}>
       <View>
         <Text style={styles.inspiration}>{myInspiration}</Text>
-
-        <View style={styles.button}>
-          <Button title="Add to list" onPress={() => addToList(myInspiration)} />
-        </View>
       </View>
       <View>
         <Text>Choose a category</Text>
@@ -47,7 +41,10 @@ activity?type=${mypick}`)).data.activity)
       </View>
 
       <View style={styles.button}>
-        <Button title="Yes" onPress={() => inspiration(myPicker)} />
+        <Button
+          color='#157185'
+          title="Go"
+          onPress={() => inspiration(myPicker)} />
       </View>
 
 
@@ -74,4 +71,3 @@ const styles = StyleSheet.create({
 
 })
 
-//"education", "recreational", "social", "diy", "charity", "cooking", "relaxation", "music", "busywork"]

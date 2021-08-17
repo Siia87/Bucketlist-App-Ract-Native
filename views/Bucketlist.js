@@ -9,12 +9,17 @@ export default function Bucketlist() {
   const [addMode, setAddMode] = useState(false)
 
   const addTask = task => {
-    setNewItem(newItem => [
-      { id: Math.random().toString(), value: task },
-      ...newItem,
-    ])
-    setAddMode(false)
+    if (task === '') {
+      setAddMode(false)
+    } else {
+      setNewItem(newItem => [
+        { id: Math.random().toString(), value: task },
+        ...newItem,
+      ])
+      setAddMode(false)
+    }
   }
+
   const removeTask = taskId => {
     setNewItem(newItem => {
       return newItem.filter((item) => item.id !== taskId)
@@ -34,7 +39,6 @@ export default function Bucketlist() {
           text: "Delete",
           onPress: () => removeTask(taskId)
         }
-
       ]
     );
 
@@ -43,8 +47,7 @@ export default function Bucketlist() {
     <View style={styles.container}>
       <View style={styles.button}>
         <Button
-          raised={true}
-          backgroundColor='#157185'
+          color='#157185'
           title='Add to my list'
           onPress={() => setAddMode(true)} />
       </View>
@@ -79,15 +82,14 @@ const styles = StyleSheet.create({
     flex: 1,
     justifyContent: 'center',
     alignItems: 'center',
-    color: '#157185',
   },
   list: {
     backgroundColor: '#C2DADD',
+    borderColor: '#C2DADD',
+    borderRadius: 10,
     padding: 5,
     margin: 5,
-    borderColor: '#C2DADD',
-    borderRadius: 10
-    ,
+    width: 200,
 
   }
 });
