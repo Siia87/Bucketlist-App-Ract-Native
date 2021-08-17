@@ -58,8 +58,5 @@ export default function App() {
 
 
 
-//https://www.boredapi.com/
-
-//<StatusBar style="auto" />
 
 

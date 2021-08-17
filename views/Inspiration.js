@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Text, View, Button, StyleSheet } from 'react-native';
+import { Button, StyleSheet, Text, View, } from 'react-native';
 import axios from 'axios'
 import { Picker } from '@react-native-picker/picker'
 
@@ -40,27 +40,18 @@ activity?type=${mypick}`)).data.activity)
         </Picker>
       </View>
 
-      <View style={styles.button}>
-        <Button
-          color='#157185'
-          title="Go"
-          onPress={() => inspiration(myPicker)} />
-      </View>
-
-
+      <Button
+        color='#157185'
+        title="Go"
+        onPress={() => inspiration(myPicker)} />
     </View>
   )
 }
 const styles = StyleSheet.create({
-  button: {
-    width: 100,
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
   container: {
-    flex: 1,
-    backgroundColor: '#FF8E8E',
     alignItems: 'center',
+    backgroundColor: '#FF8E8E',
+    flex: 1,
     justifyContent: 'center'
   },
   inspiration: {

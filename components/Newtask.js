@@ -28,7 +28,7 @@ export default function NewTask({ onAdd, show }) {
         <TouchableOpacity
           style={styles.addButton}
           onPress={() => onAdd(myTask)} >
-          <Text>+</Text>
+          <Text style={styles.textBtn}>+</Text>
         </TouchableOpacity>
 
         <Button
@@ -53,19 +53,20 @@ const styles = StyleSheet.create({
     width: 60,
     margin: 80,
   },
-
+  textBtn: {
+    color: 'white',
+  },
   input: {
-    flex: 1,
-    justifyContent: 'center',
     alignItems: 'center',
-    margin: 60,
     backgroundColor: "white",
     borderRadius: 15,
+    elevation: 4,
+    flex: 1,
+    justifyContent: 'center',
+    margin: 60,
     padding: 35,
-    alignItems: "center",
-    shadowColor: "#000",
+    shadowColor: "black",
     shadowOpacity: 0.25,
     shadowRadius: 10,
-    elevation: 4
   }
 });

@@ -3,7 +3,6 @@ import { Text, View, FlatList, TouchableOpacity, Button, StyleSheet, Alert } fro
 import Newtask from '../components/Newtask'
 
 
-
 export default function Bucketlist() {
   const [newItem, setNewItem] = useState([])
   const [addMode, setAddMode] = useState(false)
@@ -42,7 +41,6 @@ export default function Bucketlist() {
       ]
     );
 
-
   return (
     <View style={styles.container}>
       <View style={styles.button}>
@@ -58,7 +56,6 @@ export default function Bucketlist() {
         data={newItem}
         renderItem={itemData => (
           <TouchableOpacity
-
             onPress={() => alertButton(itemData.item.id)}
           >
             <View style={styles.list}>
@@ -68,20 +65,20 @@ export default function Bucketlist() {
         )}
       />
     </View>
-
   )
 }
+
 const styles = StyleSheet.create({
   container: {
-    flex: 1,
-    backgroundColor: '#67BBC7',
     alignItems: 'center',
+    backgroundColor: '#67BBC7',
+    flex: 1,
     justifyContent: 'center',
   },
   button: {
+    alignItems: 'center',
     flex: 1,
     justifyContent: 'center',
-    alignItems: 'center',
   },
   list: {
     backgroundColor: '#C2DADD',

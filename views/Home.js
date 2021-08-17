@@ -24,8 +24,8 @@ const styles = StyleSheet.create({
   },
   image: {
     flex: 1,
+    justifyContent: "center",
     resizeMode: "cover",
-    justifyContent: "center"
   },
   text: {
     fontSize: 30,
