@@ -17,7 +17,6 @@
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/components/Newtask.js" beforeDir="false" afterPath="$PROJECT_DIR$/components/Newtask.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/Bucketlist.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/Bucketlist.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/views/Home.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/Home.js" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/views/Inspiration.js" beforeDir="false" afterPath="$PROJECT_DIR$/views/Inspiration.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -63,10 +62,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="110" y="126" width="1060" height="434" key="AVDManager" timestamp="1629185363602">
+    <state x="110" y="126" width="1060" height="434" key="AVDManager" timestamp="1629442334595">
       <screen x="0" y="0" width="1280" height="680" />
     </state>
-    <state x="110" y="126" width="1060" height="434" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1629185363602" />
+    <state x="110" y="126" width="1060" height="434" key="AVDManager/0.0.1280.680@0.0.1280.680" timestamp="1629442334595" />
     <state x="142" y="0" key="SettingsEditor" timestamp="1623843054963">
       <screen x="0" y="0" width="1280" height="680" />
     </state>

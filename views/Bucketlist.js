@@ -39,7 +39,7 @@ export default function Bucketlist() {
           onPress: () => removeTask(taskId)
         }
       ]
-    );
+    )
 
   return (
     <View style={styles.container}>
@@ -52,13 +52,14 @@ export default function Bucketlist() {
       <Newtask show={addMode} onAdd={addTask} />
 
       <FlatList
+        style={styles.list}
         keyExtractor={(item) => item.id}
         data={newItem}
         renderItem={itemData => (
           <TouchableOpacity
             onPress={() => alertButton(itemData.item.id)}
           >
-            <View style={styles.list}>
+            <View style={styles.listItem}>
               <Text >{itemData.item.value}</Text>
             </View>
           </TouchableOpacity>
@@ -81,13 +82,15 @@ const styles = StyleSheet.create({
     justifyContent: 'center',
   },
   list: {
+    height: 400
+  },
+  listItem: {
     backgroundColor: '#C2DADD',
     borderColor: '#C2DADD',
     borderRadius: 10,
     padding: 5,
     margin: 5,
     width: 200,
-
   }
-});
+})
 

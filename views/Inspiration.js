@@ -3,6 +3,7 @@ import { Button, StyleSheet, Text, View, } from 'react-native';
 import axios from 'axios'
 import { Picker } from '@react-native-picker/picker'
 
+
 export default function Inspiration() {
 
   const [myInspiration, setMyInspiration] = useState('Here it comes')
@@ -18,11 +19,13 @@ activity?type=${mypick}`)).data.activity)
   }
 
 
-
   return (
     <View style={styles.container}>
       <View>
-        <Text style={styles.inspiration}>{myInspiration}</Text>
+        <Text
+          style={styles.inspiration}
+          selectable={true}
+          selectionColor='#C2DADD'>{myInspiration}</Text>
       </View>
       <View>
         <Text>Choose a category</Text>
@@ -44,7 +47,9 @@ activity?type=${mypick}`)).data.activity)
         color='#157185'
         title="Go"
         onPress={() => inspiration(myPicker)} />
+
     </View>
+
   )
 }
 const styles = StyleSheet.create({

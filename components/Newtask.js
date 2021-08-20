@@ -9,6 +9,9 @@ export default function NewTask({ onAdd, show }) {
   const inputHandler = text => {
     setMyTask(text);
   }
+  function resetText() {
+    setMyTask('')
+  }
 
   return (
     <Modal
@@ -27,14 +30,14 @@ export default function NewTask({ onAdd, show }) {
 
         <TouchableOpacity
           style={styles.addButton}
-          onPress={() => onAdd(myTask)} >
+          onPress={() => { onAdd(myTask), resetText() }}>
           <Text style={styles.textBtn}>+</Text>
         </TouchableOpacity>
 
         <Button
           color='#157185'
           title='Back'
-          onPress={() => onAdd('')} />
+          onPress={() => { onAdd(''), resetText() }} />
 
       </View>
 
@@ -69,4 +72,4 @@ const styles = StyleSheet.create({
     shadowOpacity: 0.25,
     shadowRadius: 10,
   }
-});
+})
